@@ -4,11 +4,11 @@ import com.almasb.fxgl.animation.Animation;
 import com.almasb.fxgl.animation.Interpolators;
 import com.almasb.fxgl.animation.SequentialAnimation;
 import com.almasb.fxgl.app.FXGL;
-import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.GameEntity;
 import com.almasb.fxglgames.spaceinvaders.Config;
 import javafx.geometry.Point2D;
+import javafx.scene.shape.QuadCurve;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.ENEMY_ROWS;
  */
 public class Level5 extends SpaceLevel {
 
-    private List<Animation<?>> animations = new ArrayList<>();
+    private List<SequentialAnimation> animations = new ArrayList<>();
 
     @Override
     public void init() {
@@ -31,23 +31,40 @@ public class Level5 extends SpaceLevel {
         for (int y = 0; y < ENEMY_ROWS; y++) {
             for (int x = 0; x < ENEMIES_PER_ROW; x++) {
 
-                final int finalY = y;
-
                 FXGL.getMasterTimer().runOnceAfter(() -> {
-                    boolean toRight = FXGLMath.randomBoolean();
+                    GameEntity enemy = spawnEnemy(50, 50);
 
-                    GameEntity enemy = spawnEnemy(toRight ? 50 : Config.WIDTH - 50 - 40, 50 + finalY*75);
-
-                    Animation<?> anim = Entities.animationBuilder()
-                            .autoReverse(true)
-                            .interpolator(Interpolators.CIRCULAR.EASE_IN_OUT())
-                            .duration(Duration.seconds(3))
-                            .repeat(Integer.MAX_VALUE)
+                    Animation<?> anim1 = Entities.animationBuilder()
+                            .duration(Duration.seconds(2.5))
                             .translate(enemy)
-                            .from(enemy.getPosition())
-                            .to(new Point2D(toRight ? Config.WIDTH - 50 - 40 : 50, FXGLMath.random(50, Config.HEIGHT / 2)))
-                            .buildAndPlay();
+                            .from(new Point2D(50, 50))
+                            .to(new Point2D(Config.WIDTH - 50 - 40, 50))
+                            .build();
 
+                    Animation<?> anim2 = Entities.animationBuilder()
+                            .duration(Duration.seconds(2.5))
+                            .translate(enemy)
+                            .from(new Point2D(Config.WIDTH - 50 - 40, 50))
+                            .to(new Point2D(Config.WIDTH - 50 - 40, Config.HEIGHT / 2))
+                            .build();
+
+                    Animation<?> anim3 = Entities.animationBuilder()
+                            .duration(Duration.seconds(2.5))
+                            .translate(enemy)
+                            .from(new Point2D(Config.WIDTH - 50 - 40, Config.HEIGHT / 2))
+                            .to(new Point2D(50, Config.HEIGHT / 2))
+                            .build();
+
+                    Animation<?> anim4 = Entities.animationBuilder()
+                            .duration(Duration.seconds(2.5))
+                            .translate(enemy)
+                            .from(new Point2D(50, Config.HEIGHT / 2))
+                            .to(new Point2D(50, 50))
+                            .build();
+
+                    SequentialAnimation anim = new SequentialAnimation(anim1, anim2, anim3, anim4);
+                    anim.setCycleCount(Integer.MAX_VALUE);
+                    anim.startInPlayState();
                     animations.add(anim);
 
                 }, Duration.seconds(t));
@@ -59,6 +76,6 @@ public class Level5 extends SpaceLevel {
 
     @Override
     public void destroy() {
-        animations.forEach(Animation::stop);
+        animations.forEach(SequentialAnimation::stop);
     }
 }
