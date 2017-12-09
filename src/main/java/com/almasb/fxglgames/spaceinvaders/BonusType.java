@@ -34,7 +34,8 @@ public enum BonusType {
     LIFE("life.png"),
 
     // https://opengameart.org/content/bomb-2d CC-BY 3.0
-    BOMB("bomb.png");
+    BOMB("bomb.png"),
+    NUKE("nuke.png");
 
     final String textureName;
 
