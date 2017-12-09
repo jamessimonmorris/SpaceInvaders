@@ -1,0 +1,523 @@
+23:28:19.222 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+23:28:19.756 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+23:28:19.756 [JavaFX Application Thread] INFO  Version              - FXGL-0.3.9
+23:28:19.757 [JavaFX Application Thread] INFO  Version              - Source code and latest versions at: https://github.com/AlmasB/FXGL
+23:28:19.757 [JavaFX Application Thread] INFO  Version              -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+23:28:19.895 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+23:28:19.903 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+23:28:19.939 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system/fxgl.bundle
+23:28:19.951 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+23:28:19.952 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+23:28:19.953 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2017-12-09T14:51:16.645
+23:28:19.953 [FXGL Launcher Thread     ] DEBUG GameApplication      - FXGL configuration complete
+23:28:19.957 [FXGL Launcher Thread     ] INFO  GameApplication      - FXGL configuration took:  0.176 sec
+23:28:19.958 [FXGL Launcher Thread     ] DEBUG GameApplication      - Logging game settings
+Title: Space Invaders
+Version: 0.9.7
+Width: 650
+Height: 800
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.service.impl.display.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.service.impl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.service.impl.notification.FXGLNotificationService
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+23:28:21.640 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+23:28:21.646 [FXGL Launcher Thread     ] DEBUG AppStateMachine      - Initializing application states
+23:28:21.655 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Asset cacheSize=35
+23:28:21.656 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+23:28:21.693 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+23:28:21.708 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/core/notification.wav
+23:28:21.779 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/select.wav
+23:28:21.780 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/back.wav
+23:28:21.781 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/press.wav
+23:28:21.783 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/kenvector_future_thin.ttf
+23:28:21.807 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+23:28:21.812 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+23:28:21.812 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/icons/fxgl_icon.png
+23:28:21.834 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+23:28:21.869 [FXGL Launcher Thread     ] DEBUG FXGL.GameScene       - Game scene initialized: 650x800
+23:28:21.876 [FXGL Launcher Thread     ] DEBUG FXGL.GameWorld       - Game world initialized
+23:28:21.937 [FXGL Launcher Thread     ] DEBUG FXGL.PhysicsWorld    - Physics world initialized: appHeight=800, physics.ppm=50.0
+23:28:21.958 [FXGL Launcher Thread     ] DEBUG Input                - Registered new binding: Pause - Esc
+23:28:21.991 [FXGL Launcher Thread     ] INFO  GameApplication      - Game configuration took:  0.351 sec
+23:28:21.994 [JavaFX Application Thread] DEBUG MainWindow           - App size > screen size
+23:28:21.994 [JavaFX Application Thread] DEBUG MainWindow           - Target size: 650.0 x 800.0 @ 1.0
+23:28:21.994 [JavaFX Application Thread] DEBUG MainWindow           - New size:    598.0 x 736.0 @ 0.92
+23:28:21.994 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+23:28:22.080 [JavaFX Application Thread] DEBUG MainWindow           - Root size:  650.0x800.0
+23:28:22.080 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 650.0x800.0
+23:28:22.080 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 650.0x822.0
+23:28:22.080 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+23:28:22.084 [JavaFX Application Thread] DEBUG AchievementManager   - Registered new achievement "Hitman"
+23:28:22.085 [JavaFX Application Thread] DEBUG AchievementManager   - Registered new achievement "Master Scorer"
+23:28:22.086 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+23:28:22.086 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+23:28:22.086 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Next Level - L
+23:28:22.087 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+23:28:22.088 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Laser Beam - SECONDARY
+23:28:22.088 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Shoot - PRIMARY
+23:28:22.088 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+23:28:22.093 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/music/bgm.mp3
+23:28:22.229 [JavaFX Application Thread] DEBUG AudioPlayer          - Playing music Music [balance=0.0, volume=1.0, rate=1.0, cycleCount=2147483647]
+23:28:22.272 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+23:28:22.297 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+23:28:22.298 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+23:28:22.298 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:22.298 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+23:28:22.758 [JavaFX Application Thread] DEBUG AnnotationParser     - @SetEntityFactory: [SpaceInvadersFactory]
+23:28:22.759 [JavaFX Application Thread] DEBUG AnnotationParser     - @AddCollisionHandler: [BonusPlayerHandler, BulletBossHandler, BulletEnemyHandler, BulletPlayerHandler, BulletWallHandler, LaserBeamEnemyHandler]
+23:28:22.764 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+23:28:22.765 [FXGL Background Thread 1 ] DEBUG FXGL.GameWorld       - Clearing game world
+23:28:22.765 [FXGL Background Thread 1 ] DEBUG FXGL.PhysicsWorld    - Clearing physics world
+23:28:22.765 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Clearing game scene
+23:28:22.765 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Assets
+23:28:22.767 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+23:28:22.784 [FXGL Background Thread 1 ] DEBUG IOTask               - Executing task: readDataTask(./hiscore.dat)
+23:28:22.788 [FXGL Background Thread 1 ] DEBUG FS                   - Reading from: ./hiscore.dat
+23:28:22.790 [FXGL Background Thread 1 ] DEBUG IOTask               - Task succeeded: readDataTask(./hiscore.dat)
+23:28:22.817 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/background/background.png
+23:28:23.015 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: BACKGROUND(1000)
+23:28:23.029 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/player2.png
+23:28:23.038 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: TOP(2147483647)
+23:28:23.038 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+23:28:23.039 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+23:28:23.041 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/ui/main.fxml
+23:28:23.131 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/life.png
+23:28:23.142 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png@16.0x16.0
+23:28:23.142 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png@16.0x16.0
+23:28:23.143 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+23:28:23.143 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.379 sec
+23:28:23.151 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:23.151 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+23:28:23.317 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/level.wav
+23:28:24.942 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/enemy2.png
+23:28:24.962 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/enemy3.png
+23:28:24.978 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:24.980 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:24.981 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/enemy1.png
+23:28:24.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:25.010 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:25.015 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:25.022 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:25.030 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:25.033 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:25.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:25.036 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:25.038 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:25.042 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:25.046 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:25.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/wall.png
+23:28:25.062 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:25.064 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:25.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:26.360 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/background/meteor3.png
+23:28:26.366 [JavaFX Application Thread] DEBUG FXGL.GameScene       - Creating render group for layer: METEORS(1001)
+23:28:26.861 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/tank_bullet.png
+23:28:26.867 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/shoot3.wav
+23:28:26.874 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:26.875 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/shoot4.wav
+23:28:26.880 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:26.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/shoot1.wav
+23:28:26.886 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:26.888 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/shoot2.wav
+23:28:26.902 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:26.903 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:26.904 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:26.905 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:27.027 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:27.029 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:27.444 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:27.452 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/lose_life.wav
+23:28:28.060 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:28.061 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:28.596 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/laser2.png
+23:28:28.607 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:28.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/player2.png
+23:28:28.653 [JavaFX Application Thread] DEBUG FXGL.GameScene       - Creating render group for layer: PARTICLES(5000)
+23:28:28.896 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:28.897 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:28.944 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:28.946 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:28.998 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/laser_hit.png
+23:28:30.813 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:30.813 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:30.830 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:30.895 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/background/meteor1.png
+23:28:30.928 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:30.929 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:30.995 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:30.996 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:30.997 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:31.011 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:31.013 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:31.129 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:31.130 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:31.179 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:31.181 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:31.192 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/explosion.png
+23:28:31.220 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/explosion.wav
+23:28:31.224 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:31.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/wall2.png
+23:28:31.394 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/brick_hit.wav
+23:28:31.513 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:31.514 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:31.679 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:31.680 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:31.681 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:31.746 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:31.747 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:31.845 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:31.846 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:31.847 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:31.848 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:31.848 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:31.848 [JavaFX Application Thread] DEBUG EventBus             - Firing event: AchievementEvent[name=Master Scorer,description= Score 1000 points]
+23:28:31.853 [JavaFX Application Thread] DEBUG EventBus             - Firing event: NotificationEvent[message=You got an achievement! Master Scorer]
+23:28:31.979 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:31.981 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:32.029 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:32.030 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:32.196 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:32.197 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:32.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:32.267 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:32.363 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:32.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:32.365 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:32.479 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:32.480 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:32.512 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/background/meteor4.png
+23:28:32.529 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:32.530 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:32.531 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:32.664 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:32.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:32.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:32.797 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:32.830 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:32.830 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:32.831 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:32.881 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:32.882 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/lose_life.wav
+23:28:33.113 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:33.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:33.447 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:33.447 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:33.730 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:33.731 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:33.780 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:33.781 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:33.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:33.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:33.831 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:34.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:34.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:34.448 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:34.448 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:34.715 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:34.716 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:34.749 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:34.751 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:34.781 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:34.782 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:34.831 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:34.832 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:34.833 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:35.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:35.115 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:35.165 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:35.166 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:35.166 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:35.167 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/powerup_atk_rate.png
+23:28:35.347 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:35.348 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/lose_life.wav
+23:28:35.353 [JavaFX Application Thread] DEBUG AppStateMachine      - Push state: DialogSubState
+23:28:35.353 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:35.353 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState -> DialogSubState
+23:28:36.961 [JavaFX Application Thread] DEBUG AppStateMachine      - Pop state: DialogSubState
+23:28:36.961 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:36.961 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState <- DialogSubState
+23:28:36.961 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+23:28:36.961 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:36.961 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState -> LoadingState
+23:28:36.966 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+23:28:36.966 [FXGL Background Thread 1 ] DEBUG FXGL.GameWorld       - Clearing game world
+23:28:36.968 [FXGL Background Thread 1 ] DEBUG FXGL.PhysicsWorld    - Clearing physics world
+23:28:36.968 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Clearing game scene
+23:28:36.968 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Assets
+23:28:36.969 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+23:28:36.971 [FXGL Background Thread 1 ] DEBUG IOTask               - Executing task: readDataTask(./hiscore.dat)
+23:28:36.976 [FXGL Background Thread 1 ] DEBUG FS                   - Reading from: ./hiscore.dat
+23:28:36.978 [FXGL Background Thread 1 ] DEBUG IOTask               - Task succeeded: readDataTask(./hiscore.dat)
+23:28:36.979 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/background.png@650.0x800.0
+23:28:36.979 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: BACKGROUND(1000)
+23:28:36.983 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/player2.png
+23:28:36.984 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: TOP(2147483647)
+23:28:36.985 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/sounds/level.wav
+23:28:36.985 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+23:28:36.985 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+23:28:36.985 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/ui/main.fxml
+23:28:36.999 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png@16.0x16.0
+23:28:37.000 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png@16.0x16.0
+23:28:37.000 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png@16.0x16.0
+23:28:37.001 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+23:28:37.002 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.035 sec
+23:28:37.014 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:37.015 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+23:28:38.532 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:38.533 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:38.534 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:38.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:38.536 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:38.536 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.537 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.537 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.538 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:38.539 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.540 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:38.540 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:38.541 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.542 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.543 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy2.png
+23:28:38.544 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:38.546 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:38.547 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:38.547 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:38.548 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:38.565 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/player2.png@40.0x30.0
+23:28:38.566 [JavaFX Application Thread] DEBUG FXGL.GameScene       - Creating render group for layer: PARTICLES(5000)
+23:28:39.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:39.103 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:39.434 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:39.434 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:39.483 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:39.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:39.767 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:39.817 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:39.818 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:39.818 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:40.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/meteor3.png
+23:28:40.050 [JavaFX Application Thread] DEBUG FXGL.GameScene       - Creating render group for layer: METEORS(1001)
+23:28:40.101 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:40.101 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:40.433 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:40.434 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:40.485 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:40.551 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.552 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:40.552 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.552 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:40.553 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.553 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:40.553 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.554 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:40.554 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.555 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:40.766 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:40.767 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:40.818 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:40.819 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:40.819 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:40.835 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:40.837 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:41.101 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:41.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:41.451 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:41.451 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:41.484 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:41.815 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:41.816 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:41.852 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:41.853 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:41.853 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:41.854 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/powerup_atk_rate.png
+23:28:42.184 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:42.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:42.334 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:42.335 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:42.534 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:42.535 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:42.568 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:42.768 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:42.770 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:42.886 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:42.886 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:42.918 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:42.919 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:42.919 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:42.920 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/bomb.png
+23:28:43.102 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/background/meteor2.png
+23:28:43.234 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:43.235 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:43.268 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:43.586 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:43.586 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:43.618 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:43.619 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:43.619 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:43.818 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:43.819 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:43.935 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:43.936 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:44.003 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:44.004 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:44.037 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:44.037 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:44.170 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:44.171 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:44.286 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:44.286 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:44.418 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:44.419 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:44.636 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:44.637 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:44.669 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:44.985 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:44.987 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:45.021 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:45.021 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:45.021 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:45.336 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:45.337 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:45.369 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:45.687 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:45.688 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:45.719 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:45.720 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:45.720 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:46.038 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:46.038 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:46.104 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/meteor3.png
+23:28:46.387 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:46.388 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:46.402 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:46.404 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:46.436 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:46.437 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:46.737 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:46.738 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:46.771 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:46.820 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:46.821 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:47.005 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:47.005 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:47.086 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:47.087 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:47.121 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:47.122 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:47.122 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:47.123 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/life.png
+23:28:47.422 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall2.png@77.0x34.0
+23:28:47.422 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/brick_hit.wav
+23:28:47.437 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:47.438 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:47.787 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:47.788 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:48.137 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:48.137 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:48.172 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:48.488 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:48.489 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:48.522 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:48.523 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:48.523 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:48.524 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png
+23:28:48.838 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:48.839 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:49.070 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:49.071 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:49.103 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/meteor3.png
+23:28:49.187 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:49.188 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:49.222 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:49.538 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:49.539 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:49.571 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:49.572 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:49.572 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:49.572 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png
+23:28:49.888 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:49.889 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:50.238 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:50.239 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:50.273 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:50.588 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:50.589 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:50.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:50.623 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:50.624 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:50.656 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:50.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:50.939 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:50.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot2.wav
+23:28:50.973 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:51.288 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:51.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:51.323 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:51.324 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:51.324 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:51.639 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:51.640 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:51.673 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:51.822 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:51.823 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot4.wav
+23:28:51.989 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:51.990 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:52.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:52.023 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:52.023 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:52.105 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/meteor2.png
+23:28:52.339 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:52.340 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:52.341 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/tank_bullet.png
+23:28:52.341 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:52.373 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:52.690 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:52.691 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:52.723 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:52.723 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:52.723 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:53.040 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:53.041 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:53.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:53.390 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:53.391 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot1.wav
+23:28:53.424 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:53.425 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:53.425 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:53.425 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png
+23:28:53.740 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:53.740 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:53.774 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser_hit.png@15.0x15.0
+23:28:54.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/laser2.png
+23:28:54.090 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/shoot3.wav
+23:28:54.124 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/explosion.png@1280.0x80.0
+23:28:54.125 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/explosion.wav
+23:28:54.125 [JavaFX Application Thread] DEBUG EventBus             - Firing event: com.almasb.fxglgames.spaceinvaders.event.GameEvent[source=javafx.event.Event$$Lambda$81/436555821@6017b4d6]
+23:28:54.125 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/life.png
+23:28:54.127 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/level.wav
+23:28:55.124 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/background/meteor1.png
+23:28:55.642 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:55.642 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:55.642 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:55.642 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/wall.png@77.0x34.0
+23:28:55.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy1.png
+23:28:55.757 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/enemy3.png
+23:28:55.789 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Resume - Esc
+23:28:55.822 [JavaFX Application Thread] DEBUG AppStateMachine      - Push state: PauseMenuSubState
+23:28:55.823 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:28:55.823 [JavaFX Application Thread] DEBUG AppStateMachine      - PlayState -> PauseMenuSubState
+23:28:56.846 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+23:28:56.847 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+23:28:56.847 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+23:28:56.848 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+23:28:56.849 [JavaFX Application Thread] DEBUG IOTask               - Executing task: writeDataTask(system/fxgl.bundle)
+23:28:56.852 [JavaFX Application Thread] DEBUG FS                   - Writing to: system/fxgl.bundle
+23:28:56.856 [JavaFX Application Thread] DEBUG IOTask               - Task succeeded: writeDataTask(system/fxgl.bundle)
+23:28:56.856 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
