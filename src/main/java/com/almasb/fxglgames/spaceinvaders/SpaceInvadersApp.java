@@ -430,6 +430,11 @@ public class SpaceInvadersApp extends GameApplication {
             case BOMB:
                 killRandomEnemy();
                 break;
+            case NUKE:
+            	int enemiesLeft = ENEMIES_PER_LEVEL - geti("enemiesKilled");
+            	for (int i = 0; i < FXGLMath.random(1, enemiesLeft); i++)
+            		killRandomEnemy();
+            	break;
         }
     }
 
