@@ -7,21 +7,16 @@ import com.almasb.fxglgames.spaceinvaders.Config;
 import javafx.geometry.Rectangle2D;
 
 import static com.almasb.fxgl.app.DSLKt.geti;
-import static com.almasb.fxglgames.spaceinvaders.Config.ENEMIES_PER_ROW;
-import static com.almasb.fxglgames.spaceinvaders.Config.ENEMY_ROWS;
+import static com.almasb.fxglgames.spaceinvaders.Config.ENEMIES_PER_LEVEL;
+import static com.almasb.fxglgames.spaceinvaders.Config.HEIGHT;
+import static com.almasb.fxglgames.spaceinvaders.Config.WIDTH;
 
-/**
- * @author Almas Baimagambetov  
- */
 public class Level0 extends SpaceLevel {
 
     @Override
     public void init() {
-        for (int y = 0; y < ENEMY_ROWS; y++) {
-            for (int x = 0; x < ENEMIES_PER_ROW; x++) {
-                GameEntity enemy = spawnEnemy(x*60, 150 + 50 * geti("level") + y*60);
-                enemy.addControl(new RandomMoveControl(FXGLMath.random(25, 75), x, y, new Rectangle2D(0, 0, Config.WIDTH, Config.HEIGHT / 2)));
-            }
+    	for (int x = 0; x < ENEMIES_PER_LEVEL; x++) {
+                GameEntity enemy = spawnEnemy(x*WIDTH/ENEMIES_PER_LEVEL, HEIGHT/2);
         }
     }
 
