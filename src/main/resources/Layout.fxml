@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -8,51 +10,55 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.almasb.fxglgames.spaceinvaders.spriteEditor.Controller">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="0" layoutY="0" pickOnBounds="false" prefHeight="376.0" prefWidth="544.0">
-        <items>
-            <GridPane gridLinesVisible="true">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+      <SplitPane fx:id="splitPane" dividerPositions="0.0" layoutY="0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="610.0" prefWidth="550.0">
+         <items>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" prefWidth="600.0">
+               <children>
+                  <ColorPicker fx:id="colorPicker" layoutX="45.0" layoutY="32.0" />
+                  <Label layoutX="45.0" layoutY="11.0" text="Pick a color" />
+               </children></AnchorPane>
+            <GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="488.0" SplitPane.resizableWithParent="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
+               </columnConstraints>
                <padding>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                  <Insets bottom="20.0" left="5.0" right="5.0" top="20.0" />
                </padding>
+               <rowConstraints>
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
             </GridPane>
-          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="250.0" />
-        </items>
+         </items>
       </SplitPane>
    </children>
 </AnchorPane>
