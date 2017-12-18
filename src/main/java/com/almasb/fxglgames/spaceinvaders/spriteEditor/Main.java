@@ -9,7 +9,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
 public class Main extends Application {
-	private final String title = "Sprite Editor v0.2";
+	private final String title = "Sprite Editor v0.2.1";
 	
 	protected Color colorPicker() {
 		

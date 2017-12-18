@@ -1,0 +1,93 @@
+08:26:08.744 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+08:26:09.243 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+08:26:09.243 [JavaFX Application Thread] INFO  Version              - FXGL-0.3.9
+08:26:09.243 [JavaFX Application Thread] INFO  Version              - Source code and latest versions at: https://github.com/AlmasB/FXGL
+08:26:09.244 [JavaFX Application Thread] INFO  Version              -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+08:26:09.296 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+08:26:09.301 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+08:26:09.333 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system/fxgl.bundle
+08:26:09.354 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+08:26:09.354 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+08:26:09.355 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2017-12-09T14:51:16.645
+08:26:09.356 [FXGL Launcher Thread     ] DEBUG GameApplication      - FXGL configuration complete
+08:26:09.361 [FXGL Launcher Thread     ] INFO  GameApplication      - FXGL configuration took:  0.110 sec
+08:26:09.362 [FXGL Launcher Thread     ] DEBUG GameApplication      - Logging game settings
+Title: Space Invaders
+Version: 0.9.7
+Width: 650
+Height: 800
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.service.impl.display.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.service.impl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.service.impl.notification.FXGLNotificationService
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+08:26:09.438 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+08:26:09.446 [FXGL Launcher Thread     ] DEBUG AppStateMachine      - Initializing application states
+08:26:09.455 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Asset cacheSize=35
+08:26:09.456 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+08:26:09.487 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+08:26:09.507 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/core/notification.wav
+08:26:09.564 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/select.wav
+08:26:09.565 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/back.wav
+08:26:09.567 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/press.wav
+08:26:09.569 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/Copperplate_Gothic_Light_Regular.ttf
+08:26:09.585 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+08:26:09.592 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+08:26:09.592 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/icons/fxgl_icon.png
+08:26:09.616 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+08:26:09.639 [FXGL Launcher Thread     ] DEBUG FXGL.GameScene       - Game scene initialized: 650x800
+08:26:09.647 [FXGL Launcher Thread     ] DEBUG FXGL.GameWorld       - Game world initialized
+08:26:09.711 [FXGL Launcher Thread     ] DEBUG FXGL.PhysicsWorld    - Physics world initialized: appHeight=800, physics.ppm=50.0
+08:26:09.736 [FXGL Launcher Thread     ] DEBUG Input                - Registered new binding: Pause - Esc
+08:26:09.798 [FXGL Launcher Thread     ] INFO  GameApplication      - Game configuration took:  0.359 sec
+08:26:09.800 [JavaFX Application Thread] DEBUG MainWindow           - Target size: 650.0 x 800.0 @ 1.0
+08:26:09.801 [JavaFX Application Thread] DEBUG MainWindow           - New size:    650.0 x 800.0 @ 1.0
+08:26:09.802 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+08:26:09.899 [JavaFX Application Thread] DEBUG MainWindow           - Root size:  650.0x800.0
+08:26:09.899 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 650.0x800.0
+08:26:09.899 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 650.0x822.0
+08:26:09.899 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+08:26:09.905 [JavaFX Application Thread] DEBUG AchievementManager   - Registered new achievement "Hitman"
+08:26:09.905 [JavaFX Application Thread] DEBUG AchievementManager   - Registered new achievement "Master Scorer"
+08:26:09.906 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+08:26:09.907 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+08:26:09.908 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Next Level - L
+08:26:09.908 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+08:26:09.909 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Laser Beam - SECONDARY
+08:26:09.909 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Shoot - PRIMARY
+08:26:09.909 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+08:26:09.913 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/music/bgm.mp3
+08:26:09.913 [JavaFX Application Thread] FATAL AssetLoader          - Loading failed for asset: bgm.mp3. Cause: Asset "/assets/music/bgm.mp3" was not found!
+08:26:09.913 [JavaFX Application Thread] FATAL GameApplication      - Uncaught Exception:
+08:26:09.914 [JavaFX Application Thread] FATAL GameApplication      - 
+
+Exception occurred: java.lang.IllegalArgumentException : Failed to load asset: bgm.mp3. Cause: Asset "/assets/music/bgm.mp3" was not found!
+E: com.almasb.fxgl.asset.AssetLoader.loadFailed(AssetLoader.kt:652)
+E: com.almasb.fxgl.asset.AssetLoader.loadMusic(AssetLoader.kt:242)
+E: com.almasb.fxgl.audio.AudioPlayer.loopBGM(AudioPlayer.kt:189)
+E: com.almasb.fxgl.app.DSLKt.loopBGM(DSL.kt:72)
+E: com.almasb.fxglgames.spaceinvaders.SpaceInvadersApp.preInit(SpaceInvadersApp.java:149)
+E: com.almasb.fxgl.app.GameApplication.runPreInit(GameApplication.java:341)
+E: com.almasb.fxgl.app.GameApplication.lambda$launchGame$11(GameApplication.java:312)
+E: com.almasb.fxgl.core.concurrent.Async.lambda$startFX$1(Async.java:61)
+E: com.almasb.fxgl.core.concurrent.FXCoroutine$1.run(FXCoroutine.kt:34)
+E: com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+E: java.security.AccessController.doPrivileged(Native Method)
+E: com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+E: com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+
+08:26:09.914 [JavaFX Application Thread] FATAL GameApplication      - Application will now exit
+08:26:12.991 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+08:26:12.992 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+08:26:12.996 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+08:26:12.996 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+08:26:12.997 [JavaFX Application Thread] DEBUG IOTask               - Executing task: writeDataTask(system/fxgl.bundle)
+08:26:12.999 [JavaFX Application Thread] DEBUG FS                   - Writing to: system/fxgl.bundle
+08:26:13.003 [JavaFX Application Thread] DEBUG IOTask               - Task succeeded: writeDataTask(system/fxgl.bundle)
+08:26:13.004 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
