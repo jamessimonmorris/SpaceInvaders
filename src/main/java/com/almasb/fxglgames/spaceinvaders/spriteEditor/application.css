@@ -1,9 +1,5 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-
-.split-pane *.split-pane-divider {
-    -fx-padding: 1 0 1 0;
-}
 .button
- {
-    -fx-background-color: transparent;
- }
+{
+	-fx-background-color: white;
+	-fx-background-radius: 0;
+}
