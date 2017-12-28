@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("unused")
 public class Main extends Application {
-	private final String title = "Sprite Editor v0.5";
+	private final String title = "Sprite Editor v0.6";
 	public static Node root = null;
 	
 	public static Node getRoot() {
