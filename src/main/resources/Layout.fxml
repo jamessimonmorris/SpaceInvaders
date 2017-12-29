@@ -22,8 +22,9 @@
             </ColorPicker>
             <Label layoutX="29.0" layoutY="11.0" text="Pick a color" />
             <Label layoutX="201.0" layoutY="11.0" text="Pick a size" />
-            <ComboBox fx:id="gridSize" layoutX="200.0" layoutY="32.0" onAction="#getGridOption" prefHeight="27.0" prefWidth="140.0" />
-            <Label layoutX="373.0" layoutY="11.0" text="Save" />
+            <ComboBox fx:id="gridSize" layoutX="200.0" layoutY="32.0" onAction="#gridSelect" prefHeight="27.0" prefWidth="140.0" />
+            <Label layoutX="373.0" layoutY="11.0" text="Save/Load/Reset" />
+            <ComboBox fx:id="optionBox" layoutX="372.0" layoutY="32.0" onAction="#optionSelect" prefHeight="27.0" prefWidth="140.0" promptText="Select..." />
             <GridPane fx:id="grid" gridLinesVisible="true" layoutX="29.0" layoutY="85.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="480.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="30.0" />
@@ -320,7 +321,6 @@
                   <Button mnemonicParsing="false" onAction="#onButtonPress" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" prefHeight="30" prefWidth="30" GridPane.columnIndex="15" GridPane.rowIndex="15" />
                </children>
             </GridPane>
-            <Button layoutX="372.0" layoutY="32.0" mnemonicParsing="false" onAction="#onSaveBut" prefHeight="27.0" prefWidth="140.0" text="Save File..." />
          </children>
       </AnchorPane>
    </children>
