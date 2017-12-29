@@ -15,12 +15,14 @@
    <children>
       <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="590.0" prefWidth="536.0">
          <children>
-            <ColorPicker fx:id="colorPicker" layoutX="28.0" layoutY="32.0" prefHeight="27.0" prefWidth="140.0">
+            <Label layoutX="29.0" layoutY="11.0" text="Pick a color" />
+            <ColorPicker fx:id="colorPicker" layoutX="28.0" layoutY="32.0" prefHeight="27.0" prefWidth="50.0">
             	<value>
             		<Color blue="0.0" green="0.0" red="0.0" />
             	</value>
             </ColorPicker>
-            <Label layoutX="29.0" layoutY="11.0" text="Pick a color" />
+            <Label layoutX="114.0" layoutY="11.0" text="Background" />
+            <ColorPicker fx:id="bgColor" layoutX="113.0" layoutY="32.0" onAction="#bgChange" prefHeight="27.0" prefWidth="50.0" />
             <Label layoutX="201.0" layoutY="11.0" text="Pick a size" />
             <ComboBox fx:id="gridSize" layoutX="200.0" layoutY="32.0" onAction="#gridSelect" prefHeight="27.0" prefWidth="140.0" />
             <Label layoutX="373.0" layoutY="11.0" text="Save/Load/Reset" />

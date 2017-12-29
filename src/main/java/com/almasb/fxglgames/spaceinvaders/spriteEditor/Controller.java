@@ -4,16 +4,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
-
 import javax.imageio.ImageIO;
-
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Bounds;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -26,7 +23,6 @@ import javafx.scene.image.PixelReader;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
@@ -36,12 +32,13 @@ public class Controller {
 	@FXML ComboBox<String> gridSize;
 	@FXML ComboBox<String> optionBox;
 	@FXML ColorPicker colorPicker;
+	@FXML ColorPicker bgColor;
 	@FXML Button loadBut;
 	@FXML GridPane grid;
+	int pixels = 0;
 	String selected = null;
 	String style;
-	int pixels = 0;
-	int mouseClicked = 0; // 1 if mouse is currently being held
+	String[] bgBuf;
 	
 	public void initialize() {
 		ObservableList<String> gridOptions = FXCollections.observableArrayList(
@@ -52,6 +49,7 @@ public class Controller {
 		gridSize.setItems(gridOptions);
 		gridSize.getSelectionModel().selectFirst();
 		pixels = 16;
+		bgBuf = new String[pixels*pixels];
 		
 		ObservableList<String> options = FXCollections.observableArrayList(
 				"Save",
@@ -59,6 +57,12 @@ public class Controller {
 				"Reset"
 			);
 		optionBox.setItems(options);
+		
+		for (int i = 0; i < pixels*pixels; i++) {
+			Button x = (Button) this.grid.getChildren().get(i);
+			bgBuf[i] = x.getStyle();
+		}
+		
 	}
 	
 	@FXML private void onButtonPress(ActionEvent event) {
@@ -76,6 +80,18 @@ public class Controller {
 	@FXML private void onMouseExit(MouseEvent event) {
 		Button x = (Button) event.getSource();
 		x.setStyle(style);
+	}
+	
+	// find current bg color, replace all relevant cells with new color, make new color = bgBuf
+	@FXML private void bgChange() {
+		for (int i = 0; i < pixels*pixels; i++) {
+			Button x = (Button) this.grid.getChildren().get(i);
+			
+			if (x.getStyle() == bgBuf[i]) {
+				x.setStyle("-fx-background-color: "+bgColor.getValue().toString().replace("0x", "#"));
+				bgBuf[i] = x.getStyle();
+			}
+		}
 	}
 	
 	private void onSave() {
@@ -116,6 +132,7 @@ public class Controller {
         }
 	}
 	
+	
 	// load image to writable, scale it down, then pixel read/write
 	private void onLoad() {
 		onReset();
@@ -130,6 +147,7 @@ public class Controller {
 		
 		if (file != null) {
 			try {
+				bgColor.setDisable(true);
 				BufferedImage bufferedImage = ImageIO.read(file);
                 Image image = SwingFXUtils.toFXImage(bufferedImage, null);
                 
@@ -173,11 +191,16 @@ public class Controller {
         }
 	}
 	
-	private void onReset() {
+		
+private void onReset() {
 		for (int i = 0; i < pixels*pixels; i++) {
 			Button x = (Button) this.grid.getChildren().get(i);
 			x.setStyle("-fx-background-color: transparent");
+			bgBuf[i] = x.getStyle();
 		}
+		
+		bgColor.setValue(Color.WHITE);
+		bgColor.setDisable(false);
 	}
 	
 	private void loadConfirm() {
@@ -230,12 +253,15 @@ public class Controller {
 		if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "16x16 grid") {
 			System.out.println("16x16");
 			pixels = 16;
+			bgBuf = new String[pixels*pixels];
 		} else if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "32x32 grid") {
 			System.out.println("32x32");
 			pixels = 32;
+			bgBuf = new String[pixels*pixels];
 		} else if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "64x64 grid") {
 			System.out.println("64x64");
 			pixels = 64;
+			bgBuf = new String[pixels*pixels];
 		}
 		selected = (String)(gridSize.getSelectionModel().getSelectedItem());
 	}
