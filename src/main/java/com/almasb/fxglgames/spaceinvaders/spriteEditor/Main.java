@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("unused")
 public class Main extends Application {
-	private final String title = "Sprite Editor v0.6";
+	private final String title = "Sprite Editor v0.7";
 	public static Node root = null;
 	
 	public static Node getRoot() {
@@ -36,7 +36,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		    setUserAgentStylesheet(STYLESHEET_MODENA);
 			
-			Parent content = FXMLLoader.load(getClass().getClassLoader().getResource("Layout.fxml"));
+			Parent content = FXMLLoader.load(getClass().getClassLoader().getResource("16Layout.fxml"));
 			root.setCenter(content);
 			Main.root = root;
 			

@@ -1,9 +1,9 @@
 package com.almasb.fxglgames.spaceinvaders.spriteEditor;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Optional;
+import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -26,29 +27,43 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import javafx.scene.layout.AnchorPane;
 
 public class Controller {
-	
+
+	@FXML AnchorPane rootPane;
 	@FXML ComboBox<String> gridSize;
 	@FXML ComboBox<String> optionBox;
 	@FXML ColorPicker colorPicker;
 	@FXML ColorPicker bgColor;
 	@FXML Button loadBut;
 	@FXML GridPane grid;
-	int pixels = 0;
+	static int pixels = 0;
 	String selected = null;
 	String style;
 	String[] bgBuf;
+	int gridIndexBuf = 0;
 	
 	public void initialize() {
+		System.out.println(pixels);
 		ObservableList<String> gridOptions = FXCollections.observableArrayList(
 					"16x16 grid",
 					"32x32 grid",
 					"64x64 grid"
 				);
 		gridSize.setItems(gridOptions);
-		gridSize.getSelectionModel().selectFirst();
-		pixels = 16;
+		
+		if (pixels == 16 || pixels == 0) {
+			gridSize.getSelectionModel().select(0);
+			gridIndexBuf = 0;
+		} else if (pixels == 32) {
+			gridSize.getSelectionModel().select(1);
+			gridIndexBuf = 1;
+		} else if (pixels == 64) {
+			gridSize.getSelectionModel().select(2);
+			gridIndexBuf = 2;
+		}
+		
 		bgBuf = new String[pixels*pixels];
 		
 		ObservableList<String> options = FXCollections.observableArrayList(
@@ -56,6 +71,7 @@ public class Controller {
 				"Load",
 				"Reset"
 			);
+		
 		optionBox.setItems(options);
 		
 		for (int i = 0; i < pixels*pixels; i++) {
@@ -132,7 +148,6 @@ public class Controller {
         }
 	}
 	
-	
 	// load image to writable, scale it down, then pixel read/write
 	private void onLoad() {
 		onReset();
@@ -156,9 +171,9 @@ public class Controller {
                 
                 System.out.println("Loaded image is "+imgWidth+"x"+imgHeight+".");
                 
-                if (imgWidth >= 64 || imgHeight >= 64) {
+                if (imgWidth > 32 || imgHeight > 32) {
                 	gridSize.getSelectionModel().select(2);
-                } else if (imgWidth >= 32 || imgHeight >= 32) {
+                } else if (imgWidth > 16 || imgHeight > 16) {
                 	gridSize.getSelectionModel().select(1);
                 } else {
                 	gridSize.getSelectionModel().select(0);
@@ -192,7 +207,7 @@ public class Controller {
 	}
 	
 		
-private void onReset() {
+	private void onReset() {
 		for (int i = 0; i < pixels*pixels; i++) {
 			Button x = (Button) this.grid.getChildren().get(i);
 			x.setStyle("-fx-background-color: transparent");
@@ -236,6 +251,23 @@ private void onReset() {
 		}
 	}
 	
+	@FXML private void gridConfirm() throws IOException {
+		if (!gridSize.getSelectionModel().isSelected(gridIndexBuf)) {
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Grid Size Change Confirmation");
+			alert.setHeaderText(null);
+			alert.setContentText("This will delete your current image.\nAre you sure you want to continue?");
+			
+			Optional<ButtonType> result = alert.showAndWait();
+			
+			if (result.get() == ButtonType.OK) {
+			    gridSelect();
+			} else {
+				gridSize.getSelectionModel().select(gridIndexBuf);
+			}
+		}
+	}
+	
 	@FXML private void optionSelect() {
 		if ((String)(optionBox.getSelectionModel().getSelectedItem()) == "Save") {
 			onSave();
@@ -249,20 +281,28 @@ private void onReset() {
 		}
 	}
 	
-	@FXML private void gridSelect() {
+	private void gridSelect() throws IOException {
 		if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "16x16 grid") {
 			System.out.println("16x16");
 			pixels = 16;
-			bgBuf = new String[pixels*pixels];
+			
+			AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("16Layout.fxml"));
+			rootPane.getChildren().setAll(pane);
 		} else if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "32x32 grid") {
 			System.out.println("32x32");
 			pixels = 32;
-			bgBuf = new String[pixels*pixels];
+			
+			AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("32Layout.fxml"));
+			rootPane.getChildren().setAll(pane);
 		} else if ((String)(gridSize.getSelectionModel().getSelectedItem()) == "64x64 grid") {
 			System.out.println("64x64");
 			pixels = 64;
-			bgBuf = new String[pixels*pixels];
+			
+			AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("64Layout.fxml"));
+			rootPane.getChildren().setAll(pane);
 		}
+		
+		bgBuf = new String[pixels*pixels];
 		selected = (String)(gridSize.getSelectionModel().getSelectedItem());
 	}
 }
