@@ -30,7 +30,7 @@ import javafx.stage.FileChooser;
 import javafx.scene.layout.AnchorPane;
 
 public class Controller {
-
+	
 	@FXML AnchorPane rootPane;
 	@FXML ComboBox<String> gridSize;
 	@FXML ComboBox<String> optionBox;
@@ -39,12 +39,15 @@ public class Controller {
 	@FXML Button loadBut;
 	@FXML GridPane grid;
 	static int pixels = 0;
+	static int loading = 0; // 0 -> not loading, 1 -> loading image
+	static File file = null;
 	String selected = null;
 	String style;
 	String[] bgBuf;
 	int gridIndexBuf = 0;
 	
 	public void initialize() {
+		
 		System.out.println(pixels);
 		ObservableList<String> gridOptions = FXCollections.observableArrayList(
 					"16x16 grid",
@@ -53,7 +56,10 @@ public class Controller {
 				);
 		gridSize.setItems(gridOptions);
 		
-		if (pixels == 16 || pixels == 0) {
+		if (pixels == 0) {
+			gridSize.getSelectionModel().select(0);
+			gridIndexBuf = 0;
+		} else if (pixels == 16) {
 			gridSize.getSelectionModel().select(0);
 			gridIndexBuf = 0;
 		} else if (pixels == 32) {
@@ -79,6 +85,9 @@ public class Controller {
 			bgBuf[i] = x.getStyle();
 		}
 		
+		if (loading == 1) {
+			onLoad();
+		}
 	}
 	
 	@FXML private void onButtonPress(ActionEvent event) {
@@ -125,7 +134,12 @@ public class Controller {
 	    PixelReader pr = this.grid.snapshot(spa, null).getPixelReader();
 	    PixelWriter pw = image.getPixelWriter();
 	    
-	    int cellWidth = 480/pixels;
+	    int cellWidth;
+	    
+	    if (pixels != 64)
+	    	cellWidth = 480/pixels;
+	    else
+	    	cellWidth = 512/pixels;
 	    
 	    for (int y = 0; y < pixels; y++) {
 	    	for (int x = 0; x < pixels; x++) {
@@ -152,13 +166,15 @@ public class Controller {
 	private void onLoad() {
 		onReset();
 		
-		FileChooser fileChooser = new FileChooser();
-		fileChooser.setTitle("Load Image");
-		
-		FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("png Files (*.png)", "*.png");
-		fileChooser.getExtensionFilters().add(extFilter);
-		
-		File file = fileChooser.showOpenDialog(grid.getScene().getWindow());
+		if (loading == 0) {
+			FileChooser fileChooser = new FileChooser();
+			fileChooser.setTitle("Load Image");
+			
+			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("png Files (*.png)", "*.png");
+			fileChooser.getExtensionFilters().add(extFilter);
+			
+			file = fileChooser.showOpenDialog(grid.getScene().getWindow());
+		}
 		
 		if (file != null) {
 			try {
@@ -172,24 +188,42 @@ public class Controller {
                 System.out.println("Loaded image is "+imgWidth+"x"+imgHeight+".");
                 
                 if (imgWidth > 32 || imgHeight > 32) {
+                	loading = 1;
                 	gridSize.getSelectionModel().select(2);
                 } else if (imgWidth > 16 || imgHeight > 16) {
+                	loading = 1;
                 	gridSize.getSelectionModel().select(1);
                 } else {
+                	loading = 1;
                 	gridSize.getSelectionModel().select(0);
                 }
+                
+                loading = 0;
                 
         		SnapshotParameters spa = new SnapshotParameters();
                 spa.setTransform(javafx.scene.transform.Transform.scale(pixels/imgWidth, pixels/imgHeight));
                 
                 PixelReader pr = image.getPixelReader();
         	    
-        	    int cellWidth = imgWidth/pixels;
-        	    int cellHeight = imgHeight/pixels;
+        	    int cellWidth = Math.round(imgWidth/pixels);
+        	    int cellHeight = Math.round(imgHeight/pixels);
         	    
-        	    for (int y = 0; y < pixels; y++) {
+        	    int heightBuf, widthBuf;
+        	    
+        	    if (imgHeight > pixels) {
+        	    	heightBuf = pixels;
+        	    } else {
+        	    	heightBuf = imgHeight;
+        	    }
+        	    if (imgWidth > pixels) {
+        	    	widthBuf = pixels;
+        	    } else {
+        	    	widthBuf = imgWidth;
+        	    }
+        	    
+        	    for (int y = 0; y < heightBuf; y++) {
             	    int index = y*pixels;
-        	    	for (int x = 0; x < pixels; x++) {
+        	    	for (int x = 0; x < widthBuf; x++) {
         	    		Color color = pr.getColor(y*cellWidth, x*cellHeight);
         	    		
         	    		Button b = (Button) this.grid.getChildren().get(index);
@@ -198,15 +232,15 @@ public class Controller {
         	    		index++;
         	    	}
         	    }
-        	    
+        	    //194x134
     			Platform.runLater(() -> optionBox.getSelectionModel().clearSelection());
+    			file = null;
             } catch (IOException ex) {
             	ex.printStackTrace();
             }
         }
 	}
 	
-		
 	private void onReset() {
 		for (int i = 0; i < pixels*pixels; i++) {
 			Button x = (Button) this.grid.getChildren().get(i);
@@ -223,7 +257,7 @@ public class Controller {
 		alert.setTitle("Load Confirmation");
 		alert.setHeaderText(null);
 		alert.setContentText("This will delete your current image.\nAre you sure you want to continue?");
-
+	
 		Optional<ButtonType> result = alert.showAndWait();
 		
 		if (result.get() == ButtonType.OK) {
@@ -252,19 +286,23 @@ public class Controller {
 	}
 	
 	@FXML private void gridConfirm() throws IOException {
-		if (!gridSize.getSelectionModel().isSelected(gridIndexBuf)) {
-			Alert alert = new Alert(AlertType.CONFIRMATION);
-			alert.setTitle("Grid Size Change Confirmation");
-			alert.setHeaderText(null);
-			alert.setContentText("This will delete your current image.\nAre you sure you want to continue?");
-			
-			Optional<ButtonType> result = alert.showAndWait();
-			
-			if (result.get() == ButtonType.OK) {
-			    gridSelect();
-			} else {
-				gridSize.getSelectionModel().select(gridIndexBuf);
+		if (loading == 0) {
+			if (!gridSize.getSelectionModel().isSelected(gridIndexBuf)) {
+				Alert alert = new Alert(AlertType.CONFIRMATION);
+				alert.setTitle("Grid Size Change Confirmation");
+				alert.setHeaderText(null);
+				alert.setContentText("This will delete your current image.\nAre you sure you want to continue?");
+				
+				Optional<ButtonType> result = alert.showAndWait();
+				
+				if (result.get() == ButtonType.OK) {
+				    gridSelect();
+				} else {
+					gridSize.getSelectionModel().select(gridIndexBuf);
+				}
 			}
+		} else {
+			gridSelect();
 		}
 	}
 	
