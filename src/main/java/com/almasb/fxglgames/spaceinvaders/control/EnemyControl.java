@@ -46,6 +46,7 @@ import javafx.util.Duration;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("unused")
 public class EnemyControl extends Control {
 
     // TODO: fix visibility hack

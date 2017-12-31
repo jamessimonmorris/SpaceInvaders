@@ -49,6 +49,7 @@ import static com.almasb.fxgl.app.DSLKt.getdp;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("unused")
 @Required(PositionComponent.class)
 @Required(BoundingBoxComponent.class)
 @Required(InvincibleComponent.class)

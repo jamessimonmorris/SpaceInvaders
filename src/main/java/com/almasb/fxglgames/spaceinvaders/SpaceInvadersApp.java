@@ -69,6 +69,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.*;
  *
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("unused")
 public class SpaceInvadersApp extends GameApplication {
 
     @Override
@@ -321,7 +322,7 @@ public class SpaceInvadersApp extends GameApplication {
             runningFirstTime = false;
         }
     }
-
+/*
     private void playTutorial() {
         getInput().setRegisterInput(false);
 
@@ -361,6 +362,8 @@ public class SpaceInvadersApp extends GameApplication {
 
         tutorial.play();
     }
+    */
+    
 
     @Handles(eventType = "PLAYER_GOT_HIT")
     public void onPlayerGotHit(GameEvent event) {

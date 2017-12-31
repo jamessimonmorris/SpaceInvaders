@@ -20,12 +20,7 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("unused")
 public class Main extends Application {
-	private final String title = "Sprite Editor v0.7";
-	public static Node root = null;
-	
-	public static Node getRoot() {
-		return root;
-	}
+	private final String title = "Sprite Editor v0.8";
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -38,7 +33,6 @@ public class Main extends Application {
 			
 			Parent content = FXMLLoader.load(getClass().getClassLoader().getResource("16Layout.fxml"));
 			root.setCenter(content);
-			Main.root = root;
 			
 			primaryStage.setTitle(title);
 			primaryStage.setResizable(false);

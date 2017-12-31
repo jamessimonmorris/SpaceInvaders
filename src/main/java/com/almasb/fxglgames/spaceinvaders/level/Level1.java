@@ -11,6 +11,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.ENEMIES_PER_LEVEL;
 import static com.almasb.fxglgames.spaceinvaders.Config.HEIGHT;
 import static com.almasb.fxglgames.spaceinvaders.Config.WIDTH;
 
+@SuppressWarnings("unused")
 public class Level1 extends SpaceLevel {
 
     @Override
