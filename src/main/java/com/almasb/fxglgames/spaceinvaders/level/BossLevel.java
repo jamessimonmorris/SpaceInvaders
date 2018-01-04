@@ -20,6 +20,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.ENEMY_ROWS;
 /**
  * @author Almas Baimagambetov  
  */
+@SuppressWarnings("unused")
 public class BossLevel extends SpaceLevel {
 
     private List<Animation<?>> animations = new ArrayList<>();

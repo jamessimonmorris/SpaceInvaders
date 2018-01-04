@@ -22,6 +22,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.ENEMY_ROWS;
 /**
  * @author Almas Baimagambetov  
  */
+@SuppressWarnings("unused")
 public class Level4 extends SpaceLevel {
 
     private List<Animation<?>> animations = new ArrayList<>();

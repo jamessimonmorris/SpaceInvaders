@@ -66,6 +66,7 @@ import static com.almasb.fxglgames.spaceinvaders.Config.LEVEL_START_DELAY;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("unused")
 @SetEntityFactory
 public final class SpaceInvadersFactory implements EntityFactory {
 

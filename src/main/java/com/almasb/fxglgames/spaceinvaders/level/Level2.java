@@ -22,6 +22,7 @@ import static java.lang.Math.*;
 /**
  * @author Almas Baimagambetov  
  */
+@SuppressWarnings("unused")
 public class Level2 extends SpaceLevel {
 
     private List<Animation<?>> animations = new ArrayList<>();

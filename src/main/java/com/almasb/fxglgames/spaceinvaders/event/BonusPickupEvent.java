@@ -34,6 +34,7 @@ import javafx.event.EventType;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("serial")
 public class BonusPickupEvent extends GameEvent {
 
     public static final EventType<BonusPickupEvent> ANY =

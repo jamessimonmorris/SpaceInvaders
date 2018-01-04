@@ -44,6 +44,7 @@ import javafx.util.Duration;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("unused")
 @AddCollisionHandler
 public class LaserBeamEnemyHandler extends CollisionHandler {
 

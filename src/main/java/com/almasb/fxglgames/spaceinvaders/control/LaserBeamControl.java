@@ -12,6 +12,7 @@ import static com.almasb.fxgl.app.DSLKt.set;
 /**
  * @author Almas Baimagambetov  
  */
+@SuppressWarnings("unused")
 public class LaserBeamControl extends Control {
 
     @Override

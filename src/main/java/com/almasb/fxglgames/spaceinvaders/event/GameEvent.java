@@ -32,6 +32,7 @@ import javafx.event.EventType;
 /**
  * @author Almas Baimagambetov (AlmasB)  
  */
+@SuppressWarnings("serial")
 public class GameEvent extends Event {
 
     public static final EventType<GameEvent> ANY =
