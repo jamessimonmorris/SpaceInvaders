@@ -116,7 +116,7 @@ public class Controller {
 	
 	private void onSave() {
 		FileChooser fileChooser = new FileChooser();
-		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("png files (*.png)", "*.png"));
+		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files (*.png, *.jpg)", "*.png", "*.jpg"));
 		fileChooser.setTitle("Save Sprite");
 		
 		this.grid.setGridLinesVisible(false);
@@ -163,7 +163,7 @@ public class Controller {
 			FileChooser fileChooser = new FileChooser();
 			fileChooser.setTitle("Load Image");
 			
-			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("png Files (*.png)", "*.png");
+			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Image Files (*.png, *.jpg)", "*.png", "*.jpg");
 			fileChooser.getExtensionFilters().add(extFilter);
 			
 			file = fileChooser.showOpenDialog(grid.getScene().getWindow());
